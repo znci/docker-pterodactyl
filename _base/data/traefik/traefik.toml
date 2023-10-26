@@ -12,7 +12,7 @@
 [providers.docker]
 
 [certificatesResolvers.letsencrypt.acme]
-  email = "admin@example.com"
+  email = "hello@blockarchitech.com"
   storage = "acme.json"
   [certificatesResolvers.letsencrypt.acme.httpChallenge]
     entryPoint = "web"

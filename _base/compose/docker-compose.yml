@@ -1,7 +1,6 @@
-version: '3.8'
+version: "3.8"
 
 services:
-
   traefik:
     image: traefik:v3.0
     env_file:
@@ -10,8 +9,8 @@ services:
       - pterodactyl
     restart: always
     ports:
-      - "80:80"
-      - "443:443"
+      - "8081:80" # We're actually running behind NGINX on the host instead of Traefik. I am not a fan of Traefik.
+      - "8444:443"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ${DATA_DIR}/traefik/traefik.toml:/etc/traefik/traefik.toml
